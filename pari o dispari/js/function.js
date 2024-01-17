@@ -1,13 +1,11 @@
 // FUNCTIONS
 
-/* 
- @param {number} min il valore minimo da usare per la generazione
- @param {number} max il valore massimo da usare per la generazione
-
- @return Numero randomico generato tra minimo e massimo forniti
- 
+/**
+ *
+ * @param {*} min il valore minimo da usare per la generazione
+ * @param {*} max il valore massimo da usare per la generazione
+ * @returns Numero randomico generato tra minimo e massimo forniti
  */
-
 function getRandomNumber(min, max) {
   min = parseInt(min);
   max = parseInt(max);

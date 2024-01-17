@@ -23,12 +23,12 @@
 - genero un numero casuale da 1 a 5 per la CPU con la funzione **getRandomNumber**
 
 - SE la somma dei 2 numeri risulta pari
-  - variabile **_even_** = true
+  - variabile **_oddEven_** = pari
 - ALTRIMENTI
 
-  - variabile **_even_** = false
+  - variabile **_oddEven_** = dispari
 
-- SE l'utente ha scelto pari o dispari (**_userChoice_** = **_even_** = true ; ) (**_userChoice_** = **_even_** = false)
+- SE **_userChoice_** = **_even_**
 
   - l'utente ha vinto
 
