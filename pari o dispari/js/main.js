@@ -9,18 +9,6 @@ const numberArray = [1, 2, 3, 4, 5];
 let sum = "";
 let oddEven = "";
 
-// FUNCTIONS
-function addOptionToSelectInput(array, input) {
-  for (let i = 0; i < array.length; i++) {
-    input.innerHTML += `<option value="${array[i]}">${array[i]}</option>`;
-  }
-}
-
-function sumNumbers(num1, num2) {
-  sum = num1 + num2;
-  return sum;
-}
-
 addOptionToSelectInput(oddEvenArray, oddEvenSelectInput);
 addOptionToSelectInput(numberArray, userNumberInput);
 
@@ -42,13 +30,7 @@ playBtn.addEventListener("click", function () {
 
   sumNumbers(parseInt(userNumberValue), parseInt(cpuNumber));
 
-  if (sum % 2 == 0) {
-    oddEven = "pari";
-  } else {
-    oddEven = "dispari";
-  }
-
-  if (oddEven == oddEvenValue) {
+  if (isEven(sum) === oddEvenValue) {
     resultEl.innerHTML += `
   <h2>Il risultato</h2>
   <div>${sum} è un numero ${oddEven}. <span class="text-success">Hai vinto!</span></div>`;
