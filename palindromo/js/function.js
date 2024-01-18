@@ -15,11 +15,10 @@ function isPalindrom(word) {
   userWordEl.innerText = word.split(" ").join("");
   userWordReverseEl.innerText = wordReverse.split(" ").join("");
 
-  if (userWord.split(" ").join("") === wordReverse.split(" ").join("")) {
-    resultPalindrom = true;
-  } else {
-    resultPalindrom = false;
-  }
+  resultPalindrom =
+    userWord.split(" ").join("") === wordReverse.split(" ").join("")
+      ? true
+      : (resultPalindrom = false);
 
   return resultPalindrom;
 }

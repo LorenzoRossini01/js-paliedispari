@@ -9,11 +9,7 @@ let userWord = "";
 verifyBtn.addEventListener("click", function () {
   userWord = userWordInput.value;
 
-  const wordPalindrom = isPalindrom(userWord);
-
-  if (wordPalindrom == true) {
-    resultEl.innerText = `${userWord} è palindroma`;
-  } else {
-    resultEl.innerText = `${userWord} non è palindroma`;
-  }
+  resultEl.innerText = isPalindrom(userWord)
+    ? `${userWord} è palindroma`
+    : (resultEl.innerText = `${userWord} non è palindroma`);
 });
