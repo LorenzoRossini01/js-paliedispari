@@ -4,18 +4,14 @@ const userWordEl = document.getElementById("user-word");
 const userWordReverseEl = document.getElementById("user-word-reverse");
 const resultEl = document.getElementById("result");
 
+let userWord = "";
+
 verifyBtn.addEventListener("click", function () {
-  let wordReverse = "";
+  userWord = userWordInput.value;
 
-  const userWord = userWordInput.value;
-  for (let i = userWord.length - 1; i >= 0; i--) {
-    console.log(userWord[i]);
-    wordReverse += userWord[i];
-  }
-  userWordEl.innerText = userWord.split(" ").join("");
-  userWordReverseEl.innerText = wordReverse.split(" ").join("");
+  const wordPalindrom = isPalindrom(userWord);
 
-  if (userWord.split(" ").join("") === wordReverse.split(" ").join("")) {
+  if (wordPalindrom == true) {
     resultEl.innerText = `${userWord} è palindroma`;
   } else {
     resultEl.innerText = `${userWord} non è palindroma`;

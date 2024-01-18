@@ -1,4 +1,28 @@
 // FUNCTIONS
+/**
+ *
+ * @param {*} word input word
+ * @returns If word is palindrome:true, else false
+ */
+function isPalindrom(word) {
+  let wordReverse = "";
+  let resultPalindrom = "";
+
+  for (let i = word.length - 1; i >= 0; i--) {
+    console.log(word[i]);
+    wordReverse += word[i];
+  }
+  userWordEl.innerText = word.split(" ").join("");
+  userWordReverseEl.innerText = wordReverse.split(" ").join("");
+
+  if (userWord.split(" ").join("") === wordReverse.split(" ").join("")) {
+    resultPalindrom = true;
+  } else {
+    resultPalindrom = false;
+  }
+
+  return resultPalindrom;
+}
 
 /* 
  @param {number} min il valore minimo da usare per la generazione
